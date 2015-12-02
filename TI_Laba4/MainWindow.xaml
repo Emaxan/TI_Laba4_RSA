@@ -1,0 +1,48 @@
+﻿<Window x:Name="WMain" x:Class="TI_Laba4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Width="525"
+        Background="#FF2f2f2f" ResizeMode="NoResize" WindowStyle="None" WindowState="Normal" WindowStartupLocation="CenterScreen" SizeToContent="Height">
+    <Grid x:Name="GMain">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label x:Name="TiLaba4Rsa" Grid.Row="0" Content="Laba 4: RSA" FontSize="20" Foreground="#FFFF0000" HorizontalAlignment="Stretch" Height="40" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" IsTabStop="False"/>
+        <StackPanel x:Name="SPChoose" Grid.Row="1" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Top" Orientation="Horizontal">
+            <RadioButton x:Name="Crypting" Content="Crypting" Margin="10,0,10,0" Checked="State_OnChecked" Style="{DynamicResource RadioButtonStyle1}" IsTabStop="False"/>
+            <RadioButton x:Name="Decrypting" Content="Decrypting" Margin="10,0,10,0" Checked="State_OnChecked" Style="{DynamicResource RadioButtonStyle1}" IsTabStop="False"/>
+            <RadioButton x:Name="Hack" Content="Hack" Margin="10,0,10,0" Checked="State_OnChecked" Style="{DynamicResource RadioButtonStyle1}" IsTabStop="False"/>
+        </StackPanel>
+        <Grid x:Name="GCrypting" Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="P" HorizontalAlignment="Left" Foreground="Aqua"/>
+            <TextBox x:Name="TBP" Grid.Row="0" Foreground="FloralWhite" Margin="30,0,0,0" Background="Transparent" BorderThickness="0,0,0,1" Style="{DynamicResource TextBoxStyle1}" TabIndex="1"/>
+            <Label Grid.Row="1" Content="Q" HorizontalAlignment="Left" Foreground="Aqua"/>
+            <TextBox x:Name="TBQ" Grid.Row="1" Foreground="FloralWhite" Margin="30,0,0,0" Background="Transparent" BorderThickness="0,0,0,1" Style="{DynamicResource TextBoxStyle1}" TabIndex="2"/>
+            <Label Grid.Row="2" Content="Kc" HorizontalAlignment="Left" Foreground="Aqua"/>
+            <TextBox x:Name="TBC" Grid.Row="2" Foreground="FloralWhite" Margin="30,0,0,0" Background="Transparent" BorderThickness="0,0,0,1" Style="{DynamicResource TextBoxStyle1}" TabIndex="3"/>
+            <Label Grid.Row="5" Content="File" HorizontalAlignment="Left" Foreground="Aqua"/>
+            <TextBox x:Name="TBF" Grid.Row="5" Foreground="FloralWhite" Text="E:\Programs\VS\_TI\TI_Laba4\1.txt" Margin="30,0,0,0" Background="Transparent" BorderThickness="0,0,0,0" Style="{DynamicResource TextBoxStyle1}" TabIndex="6"/>
+            <Label Grid.Row="3" Content="R" HorizontalAlignment="Left" Foreground="Aqua"/>
+            <TextBox x:Name="TBR" Grid.Row="3" Foreground="FloralWhite" Margin="30,0,0,0" Background="Transparent" BorderThickness="0,0,0,1" Style="{DynamicResource TextBoxStyle1}" TabIndex="4"/>
+            <Label Grid.Row="4" Content="Ko" HorizontalAlignment="Left" Foreground="Aqua"/>
+            <TextBox x:Name="TBO" Grid.Row="3" Foreground="FloralWhite" Margin="30,22,0,4" Background="Transparent" BorderThickness="0,0,0,1" Style="{DynamicResource TextBoxStyle1}" TabIndex="5" Grid.RowSpan="2"/>
+            <Label BorderThickness="0" HorizontalAlignment="Left" Height="26" Margin="425,0,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100" MouseDown="OpenFile"/>
+        </Grid>
+        <TextBox x:Name="TbResult" Grid.Row="3" Background="#50000000" BorderThickness="0" Height="150" IsReadOnly="True" Foreground="Lime" TextWrapping="Wrap"/>
+        <Button x:Name="BWork" Grid.Row="4" Content="Work" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="100" Style="{DynamicResource ButtonStyle1}" Click="BWork_Click" Margin="5,5,0,5" IsTabStop="False"/>
+        <Button x:Name="BExit" Grid.Row="4" Content="Exit" HorizontalAlignment="Right" VerticalAlignment="Center" Height="30" Width="100" Style="{DynamicResource ButtonStyle1}" Click="BExit_OnClick" Margin="0,5,5,5" IsTabStop="False"/>
+        <Button x:Name="BGenerate" Grid.Row="4" Content="Generate" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" Style="{DynamicResource ButtonStyle1}" Click="BGenerate_OnClick" Margin="0" IsTabStop="False"/>
+    </Grid>
+</Window>
